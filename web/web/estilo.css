@@ -1,0 +1,287 @@
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+
+body{
+	font-family: 'Century Gothic';
+	background-color:#B6F5F5;
+	
+	
+}
+h2{
+	padding-top:10px;
+	padding-bottom:10px;
+	color:black;
+	font-size:24px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+
+a{
+	text-decoration:none; /*para los enlaces de fuera del menu*/
+}
+A:link {color: black; font-family: 'Century Gothic'; text-decoration: none }
+A:hover {color: black; font-family: 'Century Gothic'; text-decoration: none }
+A:visited {color: black; font-family: 'Century Gothic'; text-decoration: none }
+ul{
+	list-style:none;
+}
+
+img{
+	max-width:100%;
+	margin-left:15px;
+}
+/* los estilos para la tabla */
+
+
+.borde-tabla {
+	border-collapse: collapse;
+	border: 3px solid black;
+	
+}
+.borde-celda {
+	border: 3px solid #666666;
+
+		}
+.borde-contenido{
+	border: 1px solid #666666;
+	text-align:center;
+	width:auto;
+	padding: 5 5 5 5;
+}
+
+h3{ /* 3 y 4 para el pie*/
+	color:#fff;
+	font-size:34px;
+	font-weight:bold;
+	text-align:center;
+}
+h4{
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;	
+}
+blockquote{ /*para las citas*/
+	margin-bottom:5px;
+	margin-left:20px;
+	margin-right:30px;
+	margin-top:10px;
+	font-style:italic;
+}
+.seccion{
+	color:black;
+	font-size:32px;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:underline;
+}
+
+.encabezado{
+	padding-top:10px;
+	padding-bottom:10px;
+	color:black;
+	font-size:18px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+/* Ocultar botón radio */ 
+input[id^="spoiler"]{
+ display: none;
+}
+/* Estilo botón clicable */
+input[id^="spoiler"] + label { /* para analizar el estado de checked y darle una clase u otra*/
+  display: block;
+  width:auto;
+  font-weight:bold;
+	text-decoration:underline;
+  text-align: justify;
+  font-size: 24px;
+  
+  cursor: pointer;
+  transition: all .6s;
+}
+/* Estilo botón cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label {
+  color: grey;
+  
+}
+/* Estilo caja SPOILER (inicialmente oculto) */
+input[id^="spoiler"] ~ .spoiler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+   
+ 
+  
+  transition: all .6s;
+}
+/* Estilo caja SPOILER cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label + .spoiler{
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+}
+
+.listo{ /* lista distinta a la de menu*/
+	padding-left:10px;
+	
+}
+.ulo{
+	padding-left:30px;
+	
+}
+footer{
+	position:relative; 
+	top: 0.5em;
+    height: 80px; 
+  background-color:black; 
+  width:100%;
+    
+   
+}
+.title{
+	width:100%;
+	background-image:url("menu/logo.png");
+	background-repeat:no-repeat;
+	background-size:50% 100%;
+	background-position:center;
+	background-color:black;
+	height:200px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.title h1{
+	color:#fff;
+	font-size:64px;
+	font-weight:200;
+	text-align:center;
+	
+}
+.contenedor{
+	 min-height:100%;
+height: auto!important;
+height:100%;
+}
+.contenido{
+	left:10%;
+	width:80%;
+	word-wrap:break-word;
+	padding-top:10px;
+	text-align:justify;
+	position:relative; top: 0.5em;
+    
+	
+}
+.foto{
+	padding-left:15px;
+}
+
+
+.navegacion{ /*para el menu*/
+	width:100%;
+	background:#1C1C1C;
+	display:flex;
+	justify-content:center;
+	
+}
+/*efectos menu*/
+.menu{
+	width:1000px;
+	display:flex;
+	flex-wrap:wrap;
+	height:90px;
+}
+.menu li{
+	flex-basis:0;
+	flex-grow:1;
+	border-right:1px solid #363636;
+	position:relative;
+}
+.menu .first-item{
+	border-left:1px solid #363636;
+	
+}
+.menu li a{
+	display:flex;
+	flex-direction:column;
+	font-size:18px;
+}
+
+.menu .imagen{
+	position:absolute;
+	bottom:0;
+	right:30px;
+	width:0%;
+	z-index:20;
+	-webkit-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+   -moz-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     -o-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+        transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+-webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+   -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+        transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+	
+}
+.menu li a .text-item{
+	width:100%;
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	color:#fff;
+	top:0%;
+	position:absolute;
+	z-index:10;
+	
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+
+-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.menu li a .down-item{
+	position:absolute;
+	top:0%;
+	width:100%;
+	height:100%;
+	background: #1C1C1C;
+	
+	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+   -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+     -o-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+.menu li:hover .down-item, .menu li:hover .text-item{
+	top:100%;
+	height:115%;
+}
+
+.menu li:hover .imagen{
+	width:100%;
+	right:0px;
+}
